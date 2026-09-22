@@ -2,19 +2,16 @@ from reading import readdimensions
 from model import solve
 from printing import printboard
 
+# Maximum Non-Attacking Queens Problem
+print("Maximum Non-Attacking Queens Problem")
+print("------------------------------------")
 
-def main():
+# Reading the board dimensions from the user
+rows, columns = readdimensions()
 
-    print("Maximum Non-Attacking Queens Problem")
-    print("------------------------------------")
+# Solving the problem
+board = solve(rows, columns)
 
-    rows, columns = readdimensions()
-
-    board = solve(rows, columns)
-
-    print("\nOptimal solution:\n")
-    printboard(board)
-
-
-if __name__ == "__main__":
-    main()
+# Printing the solution
+print("\nOptimal solution:\n")
+printboard(board)
